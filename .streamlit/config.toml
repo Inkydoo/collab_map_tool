@@ -1,0 +1,25 @@
+[theme]
+base = "light"
+
+# Warm beige background
+backgroundColor = "#F5EBDD"
+
+# Slightly darker beige for sidebar/widget backgrounds
+secondaryBackgroundColor = "#EAE0CC"
+
+# Text color that reads well on beige
+textColor = "#3B3327"
+
+# Accent color for buttons, sliders, etc.
+primaryColor = "#B08968"
+
+# Border color for containers, widgets, dataframes
+borderColor = "#8C7A5B"
+
+# Show borders around widgets even when not focused
+showWidgetBorder = true
+
+# Show a visual separator between sidebar and main content
+showSidebarBorder = true
+
+font = "sans serif"
