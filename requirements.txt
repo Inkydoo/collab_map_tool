@@ -3,3 +3,5 @@ pandas
 numpy
 st-gsheets-connection
 streamlit-agraph
+streamlit[auth]
+httpx
