@@ -49,14 +49,14 @@ type_dict = {"Physical": ["#ffcc00", "icons/physical.png"],
              "Food Systems": ["#99cc33", "icons/food.png"],
              "Energy Systems": ["#ff6600", "icons/energy.png"],
              "Misc.": ["#ff9900", "icons/misc.png"],
-             "Source": ["color", "icons/source.png"]}
+             "Source": ["teal", "icons/source.png"]}
 
 # --- Widget area (below the title) ---
 nodes = []
 edges = []
 
-nodes.append(ag.Node(id="El Niño", label="El Niño", size=30, shape="circularImage",
-                     image=local_image_to_data_uri("icons/physical.png"), imagePadding=5))
+nodes.append(ag.Node(id="El Niño", label="El Niño", size=40, shape="circularImage",
+                     image=local_image_to_data_uri("icons/el_nino.png"), imagePadding=10))
 
 for row in range(len(df)):
     node_name = df.iat[row, 0]
@@ -74,7 +74,16 @@ def display_graph():
         config = ag.Config(width=1200,
                            height=600,
                            directed=True,
-                           physics=True,
+                           physics={
+                               "barnesHut": {
+                                   "gravitationalConstant": -8000,
+                                   "centralGravity": 0.3,  # pulls all nodes toward the center
+                                   "springLength": 100,  # rest length of edges
+                                   "springConstant": 0.04,  # stiffness of edges (higher = stronger pull along edges)
+                                   "damping": 0.09,
+                                   "avoidOverlap": 0.1
+                               }
+                           },
                            hierarchical=False,
                            )
 

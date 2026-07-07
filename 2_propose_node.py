@@ -27,14 +27,17 @@ def node_proposal_portal():
     connect_json = json.dumps(connect)
     node_type = st.selectbox("What type of impact is this?", types)
     evidence = st.text_input("Please provide argumentation for your impact, with evidence.")
+    group_id = st.text_input("What is your GroupID?")
     if st.button("Submit"):
         if not name or not connect or not node_type or not evidence:
             st.write("At least one field is missing, please complete the form")
         elif name in list(nodes):
             st.write("This impact already exists! No duplicate names")
+        elif not group_id:
+            st.write("You must include your Group ID!")
         else:
             submission_time = datetime.now().strftime("%A, %B %d, %Y, at %H:%M:%S")
-            new_row = pd.DataFrame(data={"Name": name, "Type": node_type, "Connection": connect_json,"Evidence": evidence, "Submission Time": submission_time, "Status": "Review"}, index=[0])
+            new_row = pd.DataFrame(data={"Name": name, "Type": node_type, "Connection": connect_json,"Evidence": evidence, "Submission Time": submission_time, "Status": "Review", "GroupID": group_id}, index=[0])
 
             df = conn.read(worksheet="Proposed Nodes", ttl=0)
             df = pd.concat([df, new_row], ignore_index=True)

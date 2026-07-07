@@ -36,13 +36,16 @@ def connect_proposal_portal():
         target_json = json.dumps(target)
         connect_json = json.dumps(connect)
         evidence = st.text_input("Please provide argumentation for your impact, with evidence.")
+        group_id = st.text_input("What is your GroupID?")
         if st.button("Submit"):
             if not evidence or not connect:
                 st.write("At least one field is empty! Please complete the form")
+            elif not group_id:
+                st.write("Please add your GroupID!")
             else:
                 submission_time = datetime.now().strftime("%A, %B %d, %Y, at %H:%M:%S")
                 new_row = pd.DataFrame(data={"Target": target_json, "Cause": connect_json, "Evidence": evidence,
-                                             "Submission Time": submission_time, "Status": "Review"}, index=[0])
+                                             "Submission Time": submission_time, "Status": "Review", "GroupID": group_id}, index=[0])
 
                 df = conn.read(worksheet="Proposed Connections", ttl=0)
                 df = pd.concat([df, new_row], ignore_index=True)
