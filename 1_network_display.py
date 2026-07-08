@@ -158,10 +158,13 @@ with st.container(key="intro3", border=True):
 
 
 st.write("Learn more about the organizations hosting this event below!")
-col5, col6 = st.columns(2)
+col5, col6, col7 = st.columns(3)
 with col5:
     st.subheader("WOMENVAI")
     st.image("icons/womenvai_logo.png",width=300, caption='Click to learn more!', link='https://womenvai.org/')
 with col6:
     st.subheader("UCL Humanitarian Institute")
     st.image("icons/ucl_humanitarian.png", width=300, caption='Click to learn more!', link='https://www.ucl.ac.uk/humanitarian/')
+with col7:
+    st.subheader("Resilience World Nexus Summit")
+    st.image("icons/rwn_logo.png", width=300, caption='Click to learn more!', link='https://www.rwnsummit.com/')
