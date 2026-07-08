@@ -10,7 +10,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 df = conn.read(worksheet="Graph Data", ttl=0)
 
 nodes = df["Name"].values
-types = ["Infrastructure","Disaster Risk", "Social", "Economic", "Inequality", "Human Rights", "Food Systems", "Energy Systems", "Health", "Misc."]
+types = ["Infrastructure","Disaster Risk","Ecological", "Social", "Economic", "Inequality", "Human Rights", "Food Systems", "Energy Systems", "Health", "Misc."]
 # --- Title ---
 st.title("Propose an Impact or Vulnerability")
 with st.container(key='node_description', border=True):

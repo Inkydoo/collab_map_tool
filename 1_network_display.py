@@ -43,6 +43,7 @@ def local_image_to_data_uri(path):
 
 type_dict = {"Infrastructure": ["#ffcc00", "icons/physical.png"],
              "Social": ["#3399cc", "icons/social.png"],
+             "Ecological": ["light green", "icons/eco.png"],
              "Economic": ["#669900", "icons/economic.png"],
              "Inequality": ["#6fb1a0", "icons/inequality.png"],
              "Human Rights": ["#990066", "icons/humanrights.png"],
