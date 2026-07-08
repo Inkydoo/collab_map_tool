@@ -41,7 +41,7 @@ def local_image_to_data_uri(path):
     return f"data:image/{ext};base64,{encoded}"
 
 
-type_dict = {"Physical": ["#ffcc00", "icons/physical.png"],
+type_dict = {"Infrastructure": ["#ffcc00", "icons/physical.png"],
              "Social": ["#3399cc", "icons/social.png"],
              "Economic": ["#669900", "icons/economic.png"],
              "Inequality": ["#6fb1a0", "icons/inequality.png"],
@@ -49,6 +49,8 @@ type_dict = {"Physical": ["#ffcc00", "icons/physical.png"],
              "Food Systems": ["#99cc33", "icons/food.png"],
              "Energy Systems": ["#ff6600", "icons/energy.png"],
              "Misc.": ["#ff9900", "icons/misc.png"],
+             "Health": ["red", "icons/health.png"],
+             "Disaster Risk": ["beige", "icons/disaster.png"],
              "Source": ["teal", "icons/source.png"]}
 
 # --- Widget area (below the title) ---
