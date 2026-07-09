@@ -79,8 +79,8 @@ def display_graph():
                            directed=True,
                            physics={
                                "barnesHut": {
-                                   "gravitationalConstant": -5000,
-                                   "centralGravity": 0.3,  # pulls all nodes toward the center
+                                   "gravitationalConstant": -2000,
+                                   "centralGravity": 0.05,  # pulls all nodes toward the center
                                    "springLength": 200,  # rest length of edges
                                    "springConstant": 0.1,  # stiffness of edges (higher = stronger pull along edges)
                                    "damping": 0.09,
