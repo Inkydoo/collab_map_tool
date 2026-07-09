@@ -91,7 +91,7 @@ def display_graph():
                            )
 
         ag.agraph(nodes=nodes, edges=edges, config=config)
-
+        st.write("https://docs.google.com/spreadsheets/d/1ab6Y1FTRquwfnJ0PLI-OLbXCE36lXJXROfbfoUXH0nY/edit?usp=sharing")
 
 widget_container = st.container(border=True, key='network')
 with widget_container:
