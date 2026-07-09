@@ -79,12 +79,12 @@ def display_graph():
                            directed=True,
                            physics={
                                "barnesHut": {
-                                   "gravitationalConstant": -100,
+                                   "gravitationalConstant": 0,
                                    "centralGravity": 0.01,  # pulls all nodes toward the center
                                    "springLength": 500,  # rest length of edges
-                                   "springConstant": 0.5,  # stiffness of edges (higher = stronger pull along edges)
+                                   "springConstant": 0.9,  # stiffness of edges (higher = stronger pull along edges)
                                    "damping": 0.09,
-                                   "avoidOverlap": 0.9
+                                   "avoidOverlap": 1
                                }
                            },
                            hierarchical=False,
